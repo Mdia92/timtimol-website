@@ -1,20 +1,17 @@
-/* nav.js — shared header behavior: mobile toggle, active link, lang persistence */
+/* nav.js — mobile toggle, active link, and language persistence (non-intrusive) */
 
-// --- Mobile menu toggle ---
-(function setupMobileMenu() {
+document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("nav-toggle");
   const menu = document.getElementById("site-nav");
-  if (!toggle || !menu) return;
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      menu.classList.toggle("open", !expanded);
+    });
+  }
 
-  toggle.addEventListener("click", () => {
-    const expanded = toggle.getAttribute("aria-expanded") === "true";
-    toggle.setAttribute("aria-expanded", String(!expanded));
-    menu.classList.toggle("open", !expanded);
-  });
-})();
-
-// --- Active nav link based on current page ---
-(function highlightActiveLink() {
+  // Active link
   const path = window.location.pathname;
   const page = path.substring(path.lastIndexOf("/") + 1) || "index.html";
   const map = {
@@ -25,29 +22,23 @@
     "impact.html": "nav-impact",
     "partners.html": "nav-partners",
     "resources.html": "nav-resources",
-    "contact.html": "nav-contact"
+    "contact.html": "nav-contact",
   };
   const activeId = map[page];
-  if (!activeId) return;
-  const link = document.getElementById(activeId);
+  const link = activeId ? document.getElementById(activeId) : null;
   if (link) {
     link.classList.add("active");
-    // optional: set aria-current for accessibility
     link.setAttribute("aria-current", "page");
   }
-})();
 
-// --- Language persistence across pages ---
-(function persistLanguage() {
+  // Language persistence (do NOT trigger load here; pages handle their own init)
   const select = document.getElementById("language-switcher");
-  if (!select) return;
-
-  // On load: set select to saved language (defaults to 'fr')
   const saved = localStorage.getItem("lang") || "fr";
-  select.value = saved;
-
-  // When user changes language: save
-  select.addEventListener("change", (e) => {
-    localStorage.setItem("lang", e.target.value);
-  });
-})();
+  if (select) {
+    select.value = saved;
+    select.addEventListener("change", (e) => {
+      localStorage.setItem("lang", e.target.value);
+      // do not load here — page scripts call loadLanguage themselves
+    });
+  }
+});
