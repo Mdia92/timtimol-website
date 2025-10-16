@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "fr": "Rapport d'impact 2024",
+      "en": "Impact Report 2024"
+    },
+    "description": {
+      "fr": "Synthèse des résultats et indicateurs clés par région.",
+      "en": "Summary of results and key indicators by region."
+    },
+    "file": "downloads/rapport-impact-2024.pdf",
+    "size": "2.3 MB",
+    "category": "Rapport"
+  },
+  {
+    "id": 2,
+    "title": {
+      "fr": "Guide formation coopératives 2025",
+      "en": "Cooperatives Training Guide 2025"
+    },
+    "description": {
+      "fr": "Méthodologie pas à pas pour structurer une coopérative locale.",
+      "en": "Step-by-step methodology to structure a local cooperative."
+    },
+    "file": "downloads/guide-formation-coop-2025.pdf",
+    "size": "1.7 MB",
+    "category": "Guide"
+  }
+]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="À propos de TimTimol AIS" />
+  <title>À propos - TimTimol AIS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- 🔁 Sélecteur de langue -->
+  <div style="text-align: right; padding: 10px;">
+    <select id="language-switcher">
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+  <!-- 🔗 Navigation entre pages -->
+<header class="site-header">
+  <div class="brand-row">
+    <h1 id="title"></h1>
+
+    <!-- Mobile toggle button -->
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+  </div>
+
+  <nav>
+    <ul id="site-nav" class="site-nav">
+      <!-- Items translated by JSON + JS -->
+      <li><a href="index.html" id="nav-home"></a></li>
+      <li><a href="about.html" id="nav-about"></a></li>
+      <li><a href="activities.html" id="nav-activities"></a></li>
+      <li><a href="projects.html" id="nav-projects"></a></li>
+      <li><a href="contact.html" id="nav-contact"></a></li>
+
+      <!-- Static labels for now (we can translate later) -->
+      <li><a href="impact.html" id="nav-impact">Impact</a></li>
+      <li><a href="partners.html" id="nav-partners">Partenaires</a></li>
+      <li><a href="resources.html" id="nav-resources">Ressources</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- 🧠 Contenu "À propos" -->
+  <main>
+    <section id="about">
+      <h2 id="about-title"></h2>
+      <p id="about-text"></p>
+
+      <h3 id="about-values-title"></h3>
+      <ul id="about-values-list"></ul>
+
+      <h3 id="about-team-title"></h3>
+      <p id="about-team-text"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p id="footer-text"></p>
+  </footer>
+  <script src="js/nav.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>

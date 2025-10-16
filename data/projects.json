@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "title": {
+      "fr": "Projet Eau Village A",
+      "en": "Water Project Village A"
+    },
+    "description": {
+      "fr": "Installation de puits et formation communautaire.",
+      "en": "Well installation and community training."
+    },
+    "region": "Ouest",
+    "theme": "Eau"
+  },
+  {
+    "id": 2,
+    "title": {
+      "fr": "Projet Agriculture B",
+      "en": "Agriculture Project B"
+    },
+    "description": {
+      "fr": "Appui aux cultures maraîchères locales.",
+      "en": "Support to local market gardening."
+    },
+    "region": "Nord",
+    "theme": "Agriculture"
+  }
+]

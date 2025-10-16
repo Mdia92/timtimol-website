@@ -1,0 +1,77 @@
+{
+  "title": "TimTimol AIS",
+"nav": {
+  "home": "Home",
+  "about": "About",
+  "activities": "Activities",
+  "projects": "Projects",
+  "contact": "Contact",
+  "impact": "Impact",
+  "partners": "Partners",
+  "resources": "Resources"
+},
+  "mission_title": "Our Mission",
+  "mission_text": "TimTimol AIS works for the development of local communities in Senegal through inclusive and innovative social action.",
+  "stats_title": "Key Figures",
+  "stat_1": "1200+ beneficiaries",
+  "stat_2": "15 completed projects",
+  "stat_3": "10 regions covered",
+  "footer": "© 2025 TimTimol AIS. All rights reserved."
+
+,
+  "about": {
+  "title": "Who are we?",
+  "text": "TimTimol AIS was born out of the desire to connect local communities and development actors through an inclusive and solidarity-based approach.",
+  "values_title": "Our Values",
+  "values_list": ["Solidarity", "Proximity", "Transparency", "Social Innovation"],
+  "team_title": "Our Team",
+  "team_text": "Our team is made up of committed professionals from the very communities they support."
+},
+"contact": {
+  "title": "Contact Us",
+  "name": "Name",
+  "email": "Email",
+  "subject": "Subject",
+  "message": "Message",
+  "submit": "Send"
+}
+,
+"activities": {
+  "title": "Our Areas of Intervention",
+  "community": {
+    "title": "Support to Local Communities",
+    "text": "Support for community projects, training, collective organization and access to adapted resources."
+  },
+  "private": {
+    "title": "Support for Private Actors",
+    "text": "Partnerships with local companies, CSR awareness, and support for sustainable social impact."
+  }
+}
+,
+"projects": {
+  "title": "Projects & Achievements",
+  "filter_region": "Filter by region",
+  "filter_theme": "Filter by theme"
+}
+,
+"impact": {
+  "title": "Our Impact in Numbers",
+  "stats": [
+    "1200+ beneficiaries",
+    "10 regions impacted",
+    "15 projects completed",
+    "8 active partners"
+  ],
+  "testimonials": "Testimonials"
+}
+,
+"partners": {
+  "title": "Our Partners and Collaborations"
+}
+,
+"resources": {
+  "title": "Resources & Publications",
+  "filter_category": "Filter by category"
+}
+
+}

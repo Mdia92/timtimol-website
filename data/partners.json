@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Fondation XYZ",
+    "logo": "img/xyz-logo.png",
+    "description": {
+      "fr": "Partenaire clé dans les projets d’accès à l’eau.",
+      "en": "Key partner in water access projects."
+    }
+  },
+  {
+    "name": "ONG Solidaire",
+    "logo": "img/solidaire-logo.png",
+    "description": {
+      "fr": "Collaboration sur les formations communautaires.",
+      "en": "Collaboration on community training."
+    }
+  }
+]

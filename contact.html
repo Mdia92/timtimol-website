@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contactez TimTimol AIS" />
+  <title>Contact - TimTimol AIS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Langue -->
+  <div style="text-align: right; padding: 10px;">
+    <select id="language-switcher">
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+  <!-- Menu -->
+<header class="site-header">
+  <div class="brand-row">
+    <h1 id="title"></h1>
+
+    <!-- Mobile toggle button -->
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+  </div>
+
+  <nav>
+    <ul id="site-nav" class="site-nav">
+      <!-- Items translated by JSON + JS -->
+      <li><a href="index.html" id="nav-home"></a></li>
+      <li><a href="about.html" id="nav-about"></a></li>
+      <li><a href="activities.html" id="nav-activities"></a></li>
+      <li><a href="projects.html" id="nav-projects"></a></li>
+      <li><a href="contact.html" id="nav-contact"></a></li>
+
+      <!-- Static labels for now (we can translate later) -->
+      <li><a href="impact.html" id="nav-impact">Impact</a></li>
+      <li><a href="partners.html" id="nav-partners">Partenaires</a></li>
+      <li><a href="resources.html" id="nav-resources">Ressources</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Formulaire -->
+  <main>
+    <section id="contact">
+      <h2 id="contact-title"></h2>
+      <form id="contact-form" novalidate>
+        <label for="name" id="label-name"></label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email" id="label-email"></label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="subject" id="label-subject"></label>
+        <input type="text" id="subject" name="subject" required />
+
+        <label for="message" id="label-message"></label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" id="submit-button"></button>
+        <p id="form-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p id="footer-text"></p>
+  </footer>
+  <script src="js/nav.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

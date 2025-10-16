@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Partenaires et collaborations - TimTimol AIS" />
+  <title>Partenaires - TimTimol AIS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Sélecteur de langue -->
+  <div style="text-align: right; padding: 10px;">
+    <select id="language-switcher">
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+  <!-- Menu -->
+<header class="site-header">
+  <div class="brand-row">
+    <h1 id="title"></h1>
+
+    <!-- Mobile toggle button -->
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+  </div>
+
+  <nav>
+    <ul id="site-nav" class="site-nav">
+      <!-- Items translated by JSON + JS -->
+      <li><a href="index.html" id="nav-home"></a></li>
+      <li><a href="about.html" id="nav-about"></a></li>
+      <li><a href="activities.html" id="nav-activities"></a></li>
+      <li><a href="projects.html" id="nav-projects"></a></li>
+      <li><a href="contact.html" id="nav-contact"></a></li>
+
+      <!-- Static labels for now (we can translate later) -->
+      <li><a href="impact.html" id="nav-impact">Impact</a></li>
+      <li><a href="partners.html" id="nav-partners">Partenaires</a></li>
+      <li><a href="resources.html" id="nav-resources">Ressources</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Section des partenaires -->
+  <main>
+    <section id="partners">
+      <h2 id="partners-title"></h2>
+      <div id="partners-list" class="partners-grid">
+        <!-- Partenaires injectés dynamiquement ici -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p id="footer-text"></p>
+  </footer>
+  <script src="js/nav.js"></script>
+  <script src="js/partners.js"></script>
+</body>
+</html>

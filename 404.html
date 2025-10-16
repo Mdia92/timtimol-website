@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>404 — Page not found</title>
+    <meta name="description" content="404 — The page you are looking for cannot be found." />
+    <style>
+        :root{
+            --bg:#f7f8fb;
+            --card:#fff;
+            --muted:#6b7280;
+            --accent:#2563eb;
+            --shadow: 0 6px 22px rgba(16,24,40,0.08);
+        }
+        @media (prefers-color-scheme: dark){
+            :root{
+                --bg:#0b1020;
+                --card:#071127;
+                --muted:#9aa4b2;
+                --accent:#4f8fff;
+                --shadow: 0 10px 30px rgba(2,6,23,0.6);
+            }
+        }
+        html,body{height:100%}
+        body{
+            margin:0;
+            font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+            background:linear-gradient(180deg,var(--bg),rgba(0,0,0,0.02));
+            color:var(--muted);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            padding:24px;
+            -webkit-font-smoothing:antialiased;
+            text-rendering:optimizeLegibility;
+        }
+        .card{
+            background:var(--card);
+            border-radius:14px;
+            box-shadow:var(--shadow);
+            padding:36px;
+            max-width:920px;
+            width:100%;
+            display:grid;
+            grid-template-columns: 220px 1fr;
+            gap:28px;
+            align-items:center;
+        }
+        .illustration{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            font-weight:700;
+            color:var(--accent);
+            font-size:84px;
+            line-height:1;
+            user-select:none;
+        }
+        .content h1{
+            margin:0 0 8px 0;
+            font-size:28px;
+            color:inherit;
+            letter-spacing:-0.02em;
+        }
+        .content p{
+            margin:0 0 18px 0;
+            color:var(--muted);
+            font-size:15px;
+        }
+        .actions{
+            display:flex;
+            gap:12px;
+            flex-wrap:wrap;
+            align-items:center;
+        }
+        .btn{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            padding:10px 14px;
+            border-radius:10px;
+            text-decoration:none;
+            font-weight:600;
+            cursor:pointer;
+            border:1px solid transparent;
+            background:transparent;
+            color:var(--accent);
+            transition:all .12s ease;
+        }
+        .btn.primary{
+            background:var(--accent);
+            color:white;
+            box-shadow:0 6px 18px rgba(37,99,235,0.18);
+            border-color:rgba(0,0,0,0.04);
+        }
+        .btn:active{transform:translateY(1px)}
+        .muted-link{
+            color:var(--muted);
+            text-decoration:underline;
+            text-decoration-thickness:1px;
+            font-size:14px;
+        }
+        .search{
+            display:flex;
+            gap:8px;
+            margin-top:12px;
+        }
+        .search input{
+            padding:10px 12px;
+            border-radius:10px;
+            border:1px solid rgba(0,0,0,0.06);
+            outline:none;
+            min-width:200px;
+            font-size:14px;
+            background:transparent;
+            color:inherit;
+        }
+        @media (max-width:720px){
+            .card{grid-template-columns:1fr; padding:22px; gap:14px}
+            .illustration{font-size:64px}
+        }
+    </style>
+</head>
+<body>
+    <main class="card" role="main" aria-labelledby="title">
+        <div class="illustration" aria-hidden="true">404</div>
+        <div class="content">
+            <h1 id="title">Page not found</h1>
+            <p>We couldn't find the page you're looking for. It might have been moved or removed, or the URL could be incorrect.</p>
+
+            <div class="actions" role="group" aria-label="404 actions">
+                <button class="btn primary" id="homeBtn" title="Go to homepage">Take me home</button>
+                <button class="btn" id="backBtn" title="Go back">Go back</button>
+                <a class="muted-link" href="mailto:hello@example.com">Contact support</a>
+            </div>
+
+            <form id="searchForm" class="search" role="search" aria-label="Search the site">
+                <input id="q" name="q" type="search" placeholder="Search the site..." aria-label="Search query" />
+                <button class="btn" type="submit">Search</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        // Lightweight behavior: go home, go back, search via site search (fallback to Google)
+        (function(){
+            var home = document.getElementById('homeBtn');
+            var back = document.getElementById('backBtn');
+            var form = document.getElementById('searchForm');
+            var input = document.getElementById('q');
+
+            home.addEventListener('click', function(){ location.href = '/'; });
+
+            back.addEventListener('click', function(){
+                if (document.referrer && location.origin === new URL(document.referrer).origin){
+                    history.back();
+                } else {
+                    location.href = '/';
+                }
+            });
+
+            form.addEventListener('submit', function(e){
+                e.preventDefault();
+                var q = (input.value || '').trim();
+                if (!q) return input.focus();
+                // Try a site-limited Google search, fallback to root search
+                var site = location.hostname ? 'site:' + location.hostname + ' ' : '';
+                var url = 'https://www.google.com/search?q=' + encodeURIComponent(site + q);
+                window.location.href = url;
+            });
+
+            // Improve keyboard focus order for accessibility
+            input.addEventListener('keydown', function(e){
+                if (e.key === 'Enter') form.dispatchEvent(new Event('submit',{cancelable:true}));
+            });
+        })();
+    </script>
+</body>
+</html>

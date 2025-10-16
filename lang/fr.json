@@ -1,0 +1,77 @@
+{
+  "title": "TimTimol AIS",
+"nav": {
+  "home": "Accueil",
+  "about": "À propos",
+  "activities": "Activités",
+  "projects": "Projets",
+  "contact": "Contact",
+  "impact": "Impact",
+  "partners": "Partenaires",
+  "resources": "Ressources"
+},
+  "mission_title": "Notre Mission",
+  "mission_text": "TimTimol AIS œuvre pour le développement des communautés locales au Sénégal à travers des actions solidaires, inclusives et innovantes.",
+  "stats_title": "Chiffres Clés",
+  "stat_1": "1200+ bénéficiaires",
+  "stat_2": "15 projets réalisés",
+  "stat_3": "10 régions couvertes",
+  "footer": "© 2025 TimTimol AIS. Tous droits réservés."
+
+,
+"about": {
+  "title": "Qui sommes-nous ?",
+  "text": "TimTimol AIS est née de la volonté de rapprocher les communautés locales et les acteurs du développement à travers une approche inclusive et solidaire.",
+  "values_title": "Nos valeurs",
+  "values_list": ["Solidarité", "Proximité", "Transparence", "Innovation sociale"],
+  "team_title": "Notre équipe",
+  "team_text": "Notre équipe est composée de professionnels engagés, issus des territoires qu’ils accompagnent."
+},
+"contact": {
+  "title": "Contactez-nous",
+  "name": "Nom",
+  "email": "Email",
+  "subject": "Sujet",
+  "message": "Message",
+  "submit": "Envoyer"
+}
+,
+"activities": {
+  "title": "Nos domaines d’intervention",
+  "community": {
+    "title": "Soutien aux communautés locales",
+    "text": "Accompagnement de projets communautaires, formations, appui à l’organisation collective et accès à des ressources adaptées."
+  },
+  "private": {
+    "title": "Appui aux acteurs privés",
+    "text": "Partenariats avec entreprises locales, sensibilisation RSE, accompagnement dans l’impact social durable."
+  }
+}
+,
+"projects": {
+  "title": "Projets & Réalisations",
+  "filter_region": "Filtrer par région",
+  "filter_theme": "Filtrer par thématique"
+}
+,
+"impact": {
+  "title": "Notre impact en chiffres",
+  "stats": [
+    "1200+ bénéficiaires",
+    "10 régions touchées",
+    "15 projets réalisés",
+    "8 partenaires engagés"
+  ],
+  "testimonials": "Témoignages"
+}
+,
+"partners": {
+  "title": "Nos partenaires et collaborations"
+}
+,
+"resources": {
+  "title": "Ressources et publications",
+  "filter_category": "Filtrer par catégorie"
+}
+
+}
